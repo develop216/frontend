@@ -1,0 +1,58 @@
+<div class="calendar-container">
+    <h1 class="text-center">Calendrier de Présence</h1>
+    
+    <div class="week-navigation">
+      <button class="nav-button" (click)="previousWeek()">
+        &lt; Semaine précédente
+      </button>
+      <h2>Semaine du {{ formatDate(weekStart) }}</h2>
+      <button class="nav-button" (click)="nextWeek()">
+        Semaine suivante &gt;
+      </button>
+    </div>
+  
+    <div class="calendar-grid">
+      <div class="calendar-row">
+        <div class="calendar-header-cell">Collaborateur</div>
+        <div *ngFor="let day of weekDays" class="calendar-header-cell">
+          {{getJourSemaine(day)}} <br> {{ formatDate(day) }}
+        </div>
+      </div>
+  
+      <div *ngFor="let collab of collaborators" class="calendar-row">
+        <div class="calendar-cell">{{ collab.name }}</div>
+        <div *ngFor="let day of weekDays" class="calendar-cell">
+          <div *ngFor="let presence of getPresenceForDay(collab.id, day)"
+               [class]="'presence-slot presence-' + presence.period">
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="controls">
+      <select [(ngModel)]="selectedCollaborator" class="control-select">
+        <option [ngValue]="null">Sélectionner un collaborateur</option>
+        <option *ngFor="let collab of collaborators" [ngValue]="collab">
+          {{ collab.name }}
+        </option>
+      </select>
+  
+      <select [(ngModel)]="selectedDate" class="control-select">
+        <option [ngValue]="null">Sélectionner un jour</option>
+        <option *ngFor="let day of weekDays" [ngValue]="day">
+          {{ formatDate(day) }}
+        </option>
+      </select>
+  
+      <select [(ngModel)]="selectedPeriod" class="control-select">
+        <option [ngValue]="null">Sélectionner une période</option>
+        <option value="morning">Matin</option>
+        <option value="afternoon">Après-midi</option>
+        <option value="full">Journée complète</option>
+      </select>
+  
+      <button class="add-button" (click)="addPresence()">
+        Ajouter/Supprimer
+      </button>
+    </div>
+  </div>

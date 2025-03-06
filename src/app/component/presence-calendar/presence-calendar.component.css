@@ -1,0 +1,127 @@
+.calendar-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .week-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  
+  
+  .nav-button {
+    background-color: #666;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .calendar-grid {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .calendar-row {
+    display: grid;
+    grid-template-columns: 200px repeat(5, 1fr);
+    border-bottom: 1px solid #eee;
+  }
+  
+  .calendar-header-cell {
+    padding: 12px;
+    background: #f5f5f5;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .calendar-cell {
+    padding: 12px;
+    border-right: 1px solid #eee;
+    color: #333;
+    min-height: 50px;
+  }
+  
+  .presence-slot {
+    height: 20px;
+    margin: 2px 0;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Ajoute une transition douce */
+
+  }
+
+  
+  .presence-slot:hover {
+    background-color: #040000; /* Change la couleur de fond au survol */
+    transform: scale(1.05); /* Augmente légèrement la taille pour un effet visuel */
+    cursor: pointer; /* Change le curseur en "main" pour indiquer l'interactivité */
+  }
+  
+  .presence-morning {
+    background-color: #a5d6a7;
+    
+    
+  }
+  
+  .presence-afternoon {
+    background-color: #90caf9;
+  }
+  
+  .presence-full {
+    background-color: #ce93d8;
+  }
+  
+  .presence-morning:hover {
+    background-color: #05f90e;
+    transform: scale(1.05); /* Augmente légèrement la taille pour un effet visuel */
+    cursor: pointer; /* Change le curseur en "main" pour indiquer l'interactivité */
+    
+  }
+  
+  .presence-afternoon:hover {
+    background-color: #0713f1;
+    transform: scale(1.05); /* Augmente légèrement la taille pour un effet visuel */
+    cursor: pointer; /* Change le curseur en "main" pour indiquer l'interactivité */
+  }
+  
+  .presence-full:hover {
+    background-color: #d606fa;
+    transform: scale(1.05); /* Augmente légèrement la taille pour un effet visuel */
+    cursor: pointer; /* Change le curseur en "main" pour indiquer l'interactivité */
+  }
+
+  .controls {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    gap: 16px;
+  }
+  
+  .control-select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    min-width: 200px;
+  }
+  
+  .add-button {
+    background-color: #7986cb;
+    color: white;
+    border: none;
+    padding: 8px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+  }

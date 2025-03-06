@@ -1,0 +1,20 @@
+.fil-actualite {
+    margin: 20px;
+    background-color: rgba(196, 188, 188, 0.075);
+
+  }
+  
+  .publication {
+    border: 1px solid rgb(196, 215, 233);
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+
+  .publication:hover {
+    cursor: pointer;
+    background-color: rgb(244, 244, 244);
+    transform: scale(1.005);
+    transition:ease;
+  }

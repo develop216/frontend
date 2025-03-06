@@ -1,0 +1,98 @@
+/* Style général du formulaire */
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Style des groupes de champs */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Style du label */
+  .form-group label {
+    display: block;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+  }
+  
+  /* Style de l'input et du textarea */
+  .form-group input,
+  .form-group textarea,
+  .form-group select,
+  .form-group button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+    box-sizing: border-box;
+  }
+  
+  /* Effet au focus */
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+  }
+  
+  /* Style du bouton de soumission */
+  button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  button[type="submit"]:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+  }
+  
+  /* Style des inputs de type file */
+  .form-group input[type="file"] {
+    padding: 6px;
+    border: 1px solid #ddd;
+    background-color: #f8f9fa;
+  }
+  
+  .form-group input[type="file"]:hover {
+    border-color: #007bff;
+  }
+  
+  /* Responsivité : Ajuster le formulaire sur petits écrans */
+  @media (max-width: 600px) {
+    .container {
+      padding: 15px;
+    }
+  
+    h2 {
+      font-size: 20px;
+    }
+  }
+  

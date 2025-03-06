@@ -1,0 +1,16 @@
+<div class="fil-actualite">
+    <h2>Fil d'Actualité</h2>
+  <!--  <div *ngFor="let publication of publications" class="publication">
+      <h3>{{ publication.titre }}</h3> <!-- Changez cela pour afficher le nom de l'utilisateur si disponible 
+      <p>{{ publication.contenu }}</p>
+      <small>Publié le : {{ publication.dateCreation | date }}</small> par : <a>{{publication.username}}</a>
+    </div> -->
+    <div *ngFor="let publication of publications" class="publication" (click)="togglePublication(publication)">
+      <h3>
+          <a [routerLink]="['/article', publication.id]" >{{ publication.titre }}</a> 
+      </h3> 
+      <p> <span *ngIf="!publication.isExpanded; else expandedContent">{{ publication.contenu.length > 100 ? (publication.contenu | slice:0:100) + '...' : publication.contenu}} </span></p>
+      <ng-template #expandedContent>{{publication.contenu}}</ng-template>
+      <small>Publié le : {{ publication.dateCreation | date }}</small> par : <a>{{ publication.username }}</a>
+  </div>
+  </div>

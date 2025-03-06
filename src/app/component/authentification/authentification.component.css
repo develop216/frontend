@@ -1,0 +1,50 @@
+/* auth-container styles */
+.auth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre horizontalement */
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    background-color: #ffffff; /* Fond blanc */
+}
+
+/* logo styles */
+.logo {
+    max-width: 100%; /* Réduit la taille de l'image pour qu'elle soit responsive */
+    height: auto; /* Garde le ratio de l'image */
+    margin-bottom: 20px; /* Espace entre l'image et le formulaire */
+}
+
+/* form-group styles */
+.form-group {
+    display: flex; /* Utilise flexbox pour aligner les éléments */
+    flex-direction: column; /* Aligne verticalement */
+    margin-bottom: 15px; /* Espace entre les champs du formulaire */
+    width: 100%; /* Prend toute la largeur disponible */
+    max-width: 300px; /* Limite la largeur des champs de formulaire si nécessaire */
+}
+
+label {
+    margin-bottom: 5px; /* Espace entre le texte du label et le champ de saisie */
+}
+
+input {
+    padding: 8px; /* Espace intérieur du champ de saisie */
+    border: 1px solid #ccc; /* Bord gris clair */
+    border-radius: 4px; /* Coins arrondis */
+    width: 100%; /* Prend toute la largeur de son parent */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+}
+
+button {
+    padding: 10px 15px; /* Espace intérieur du bouton */
+    background-color: #424242; /* Couleur du bouton */
+    color: #fff; /* Couleur du texte du bouton */
+    border: none; /* Aucun bord */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur qui change sur hover */
+    width: 100%; /* Prend toute la largeur de son parent */
+}
+
+button:hover {
+    background-color: #0056b3; /* Couleur du bouton au survol */
+}

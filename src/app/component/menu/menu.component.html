@@ -1,0 +1,8 @@
+<nav>
+  <button class="menu-toggle" (click)="toggleMenu()">☰ Menu</button>
+  <ul [class.show]="isMenuOpen" class="menu-content">
+    <li *ngFor="let item of menuItems">
+      <a [routerLink]="item.path" routerLinkActive="active" class="menu-item">{{ item.name }}</a>
+    </li>
+  </ul>
+</nav>
